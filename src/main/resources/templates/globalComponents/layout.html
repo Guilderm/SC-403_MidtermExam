@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="shortcut icon" th:href="@{images/Fidelitas_Favicon.png}" type="image/jpg"/>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--====== Customize CSS ======-->
+    <link rel="stylesheet" th:href="@{CSS/global.css}">
+
+    <title layout:title-pattern="$CONTENT_TITLE | $LAYOUT_TITLE">Midterm Exam</title>
+</head>
+<body>
+
+<!-- Navbar -->
+<div th:insert="globalComponents/navbar::navbar"></div>
+
+<!-- Changing contents -->
+<div layout:fragment="content">
+    <p>This will be replaced by the Body contents</p>
+</div>
+
+<!-- Footer -->
+<div th:insert="globalComponents/footer :: footer"></div>
+
+<th:block layout:fragment="optional"/>
+
+<!-- Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<!--====== Customize scripts ======-->
+<script th:href="@{scripts/global.js}"></script>
+
+</body>
+</html>
